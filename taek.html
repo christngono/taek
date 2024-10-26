@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            padding:15px 20px;
+            background-color: rgb(229, 26, 97);
+            color:#fff;
+            border-radius:30px;
+            box-shadow: 2px 3px rgb(127, 5, 35);
+            cursor: pointer;
+        }
+         .btn1{
+            padding:15px 20px;
+            background-color: rgb(90, 45, 215);
+            color:#fff;
+            border-radius:30px;
+            box-shadow: 2px 3px rgb(35, 8, 100);
+            cursor: pointer;
+            border:none;
+        }
+        .wrap_btn{
+            margin-left:30px;
+            margin-top:50px;
+        }
+        body{
+            height:100%;
+            display:flex;
+          
+        }
+        .container{
+            background-color: beige;
+            min-height:700px;
+            width:450px;
+            border:3px solid #000;
+             border-radius: 30px;
+        }
+        label{
+            font-size:1rem;
+            font-weight: bold;
+        }
+        input{
+            width:300px;
+            font-size:1.3rem;
+            font-weight: bold;
+            border:2px solid #ccc;
+            border-radius: 30px;
+            padding-left:10px;
+            padding-top:5px;
+            padding-bottom: 5px;
+            
+        }
+        .btn:hover{
+              box-shadow: 0px 0px rgb(37, 1, 37);
+ 
+        }
+        .forma{
+            padding-left:20px;
+            padding-top:10px;
+        }
+        select{
+            padding:10px;
+            border:2px solid #ccc;
+            width: 300px;
+             border-radius: 30px;
+              font-size:1.2rem;
+            font-weight: bold;
+        }
+        .decalage{
+            height:50px;
+            border:2px solid #ccc;
+            background-color: #fff;
+            margin-left:20px;
+            width:200px;
+            font-size: 2rem;
+            font-weight: bold;
+            
+        }
+        p{
+            font-size:1.3rem;
+            padding-left:20px;
+        }
+        .bor{
+            border-top: 2px solid #ccc;
+            margin-top:30px;
+        }
+        tr, td{
+            border:1px #ccc solid;
+        }
+        td{
+           padding:3px 15px;
+     
+        }
+        thead{
+            background-color: rgb(90, 45, 215);
+            color:#fff;
+
+        }
+     
+        /*tab
+         designer la liste des competiteurs
+        */
+        .bloc{
+           display: flex;
+          align-items: center;
+        margin-bottom:10px;
+            
+        }
+       
+        .wrap_container{
+            width:100%;
+            display:flex;
+            gap:50px;
+           
+        }
+        .box {
+    min-width: 150px;
+    height: 20px;
+    border: 2px solid #ccc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:5px;
+}
+
+.croisement {
+   width: 46PX;
+  height: 2px;
+  background-color: #ccc;
+  margin-left: -25px;
+  transform: rotate(90deg) translateX(-22px);
+}
+.croisement:after{
+       content: "";
+       display:block;
+  
+       width: 50px;
+       height: 2px;
+       margin-left:0px;
+       background-color: #ccc;
+        transform: rotate(90deg) translateX(-23px);
+}
+
+.tiret {
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+    margin-left: -2px; /* Ajustez cette valeur pour coller le tiret à la div */
+}
+
+.list{
+    margin-top:50px;
+    border:1px solid #ccc;
+   
+    padding:30px;
+    display:flex;
+}
+
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap_container">
+            <div class="container">
+               <form action="" id="forma1" >
+                    <div class="form1">
+                            <label for="">Entre le nombre athlète</label><br/>
+                            <input type="text"  name="bjr"  class="athelet">
+                            <button type="submit">envoyer</button>
+                    </div>
+                </form> 
+                <div class="decalage">
+
+                </div> 
+
+                <form action id="myform">
+                    <div class="forma bor">
+                            <label for="">Le nom de l'athlète</label><br/>
+                            <input type="text"  id='name' class="athelet" required>
+                        
+                    </div>
+                    <div class="forma">
+                            <label for="">Nom du clubs</label><br/>
+                            <input type="text"  id='clubs' class="athelet" required>
+                        
+                    </div>
+                    <div class="forma">
+                            <label for="">quote</label><br/>
+                            <input type="text"  id='quote' class="athelet" required>
+                        
+                    </div>
+                    <div class="forma">
+                        <label for="">Le poid</label><br/>
+                        <select name="" id="poids"  class="athelet" required>
+                            <option value="-42"> -42ko</option>
+                            <option value="-48"> -48ko</option>
+                            <option value="-49"> -49ko</option>
+                            <option value="-55"> -55ko</option>
+                            <option value="-58"> -58ko</option>
+                            <option value="-67"> -67ko</option>
+                            <option value="-68"> -68ko</option>
+                            <option value="-80"> -80ko</option>
+                        </select>
+                        
+                    </div>
+                    <div class="forma">
+                        <label for="">Sexe</label><br/>
+                        <select id='sexe' name="" class="athelet" required>
+                            <option value="M">Masculin</option>
+                            <option value="f"> Feminum</option> 
+                        </select>
+                        
+                    </div>
+                
+                    <div class="forma">
+                    <button class="btn1"  type="submit">Enregister un athlete</span>
+                    </div>
+            </form>
+            
+                <div class="wrap_btn">
+                <span class="btn btn3">Generer la liste de competition</span>
+                </div>
+                
+            </div>
+            <div class="tab">
+                <h2>liste des participants</h2>
+                <table>
+                    <thead>
+                            <td>N:</td>
+                            <td>Nom</td>
+                            <td>clubs</td>
+                            <td>poids</td>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                
+            </div>
+            <div class="list">
+                <div class="row">
+                   <div class="bloc">
+                    <div class="box">chritian</div> 
+                    <div class="tiret"></div>
+                   </div>
+                    <div class="bloc">
+                            <div class="box">chritian jean</div> 
+                            <div class="tiret"></div>
+                            <div class="croisement"></div>
+                    </div>
+                    <div class="bloc">
+                        <div class="box">pierre</div> 
+                        <div class="tiret"></div>
+                        
+                      </div>
+                        <div class="bloc">
+                        <div class="box">boris</div> 
+                        <div class="tiret"></div>
+                        <div class="croisement"></div>
+                     </div>
+                        <div class="bloc">
+                        <div class="box"></div> 
+                        <div class="tiret"></div>
+                    </div>
+                  
+             </div>
+               <div class="row">
+                   <div class="bloc">
+                    <div class="box">chritian</div> 
+                    <div class="tiret"></div>
+                </div>
+             </div>
+            
+    </div>
+         <script src="script.js"></script>
+</body>
+
+</html>
+
+
